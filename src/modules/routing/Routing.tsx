@@ -9,7 +9,7 @@ const RouterPage = (
 export const Routing: React.FC = () => {
   return (
     <Router>
-      <RouterPage path="/" pageComponent={<App />} />
+      <RouterPage path={Routes.Home} pageComponent={<App />} />
     </Router>
   );
 };
