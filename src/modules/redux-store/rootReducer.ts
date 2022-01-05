@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { eventReducer } from 'modules/todo/redux/meetupSlice';
+import { eventReducer } from 'modules/event/redux/eventSlice';
 
 const rootReducer = combineReducers({ eventReducer });
 
