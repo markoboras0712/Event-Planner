@@ -1,12 +1,12 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { AppThunk, AppDispatch } from "modules/redux-store/store";
-import { Todo } from "./types";
+import { AppThunk, AppDispatch } from 'modules/redux-store/store';
+import { Todo } from './types';
 
 const initialState: Todo[] = [];
 
 const todoSlice = createSlice({
-  name: "todos",
+  name: 'todos',
   initialState,
   reducers: {
     addTodo(state, action: PayloadAction<Todo>) {

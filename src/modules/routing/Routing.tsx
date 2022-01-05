@@ -1,9 +1,9 @@
-import { Router, RouteComponentProps } from "@reach/router";
-import { App } from "App";
-import { Routes } from "fixtures";
+import { Router, RouteComponentProps } from '@reach/router';
+import { App } from 'App';
+import { Routes } from 'fixtures';
 
 const RouterPage = (
-  props: { pageComponent: JSX.Element } & RouteComponentProps
+  props: { pageComponent: JSX.Element } & RouteComponentProps,
 ) => props.pageComponent;
 
 export const Routing: React.FC = () => {
@@ -14,5 +14,3 @@ export const Routing: React.FC = () => {
   );
 };
 
-
-//prettier i eslint
