@@ -13,4 +13,3 @@ export const Routing: React.FC = () => {
     </Router>
   );
 };
-

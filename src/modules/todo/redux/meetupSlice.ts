@@ -1,18 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { AppThunk, AppDispatch } from 'modules/redux-store/store';
-import { Todo } from './types';
+import { Event } from './types';
 
-const initialState: Todo[] = [];
+const initialState: Event[] = [];
 
-const todoSlice = createSlice({
-  name: 'todos',
+const eventSlice = createSlice({
+  name: 'events',
   initialState,
   reducers: {
-    addTodo(state, action: PayloadAction<Todo>) {
+    addTodo(state, action: PayloadAction<Event>) {
       state.push(action.payload);
     },
-    toggleTodo(state, action: PayloadAction<Todo>) {
+    toggleTodo(state, action: PayloadAction<Event>) {
       let todo = state.find((todo) => todo.id === action.payload.id);
 
       if (todo) {
@@ -22,18 +22,18 @@ const todoSlice = createSlice({
   },
 });
 
-export const { toggleTodo } = todoSlice.actions;
+export const { toggleTodo } = eventSlice.actions;
 
 export const addTodo =
   (text: string): AppThunk =>
   async (dispatch: AppDispatch) => {
-    const newTodo: Todo = {
+    const newTodo: Event = {
       id: Math.random().toString(36).substr(2, 9), // https://gist.github.com/gordonbrander/2230317,
       completed: false,
       text: text,
     };
 
-    dispatch(todoSlice.actions.addTodo(newTodo));
+    dispatch(eventSlice.actions.addTodo(newTodo));
   };
 
-export const todoReducer = todoSlice.reducer;
+export const eventReducer = eventSlice.reducer;

@@ -1,4 +1,4 @@
-export interface Todo {
+export interface Event {
   id: string;
   completed: boolean;
   text: string;

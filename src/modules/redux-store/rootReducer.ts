@@ -1,7 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { todoReducer } from 'modules/todo/redux/todoSlice';
+import { eventReducer } from 'modules/todo/redux/meetupSlice';
 
-const rootReducer = combineReducers({ todoReducer });
+const rootReducer = combineReducers({ eventReducer });
 
 export type RootState = ReturnType<typeof rootReducer>;
 

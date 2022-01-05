@@ -1,4 +1,4 @@
-export interface Meetup {
+export interface Event {
   id?: string;
   title: string;
   image: string;
@@ -7,8 +7,8 @@ export interface Meetup {
   isFavorite: boolean;
 }
 
-export class Meetup {
-  constructor({ id, title, image, address, description, isFavorite }: Meetup) {
+export class Event {
+  constructor({ id, title, image, address, description, isFavorite }: Event) {
     this.id = id;
     this.title = title;
     this.image = image;
@@ -18,9 +18,9 @@ export class Meetup {
   }
 }
 
-export interface AllMeetups {
-  allMeetups: Meetup[];
-  meetup: Meetup;
+export interface AllEvents {
+  allMeetups: Event[];
+  meetup: Event;
   loading: boolean;
   error: string | unknown;
 }
